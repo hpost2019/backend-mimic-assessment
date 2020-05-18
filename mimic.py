@@ -77,7 +77,10 @@ def print_mimic(mimic_dict, start_word):
         else:
             print(string, '\n')
             string = random_word + ' '
-        next_word = random_word
+        if random_word in mimic_dict:
+            next_word = random_word
+        else: 
+            next_word = start_word
         count += 1
     pass
 
